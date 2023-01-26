@@ -13,14 +13,16 @@ export default class StatusFilter extends Component {
     render() {
         const buttons = this.buttons.map(({ name, label }) => {
             const active = this.props.filter === name;
-            const clazz = active ? 'info' : 'btn-outline-secondary';
+            const classesOptions = active ? 'info' : 'outline-info';
 
             return (
                 <Button
                     key={name}
-                    color={clazz}
+                    color={classesOptions}
                     onClick={() => this.props.updateFiler(name)}
-                >{label}</Button>
+                >
+                    {label}
+                </Button>
             )
         });
 
