@@ -30,14 +30,16 @@ export default class PostAddForm extends Component {
                 <input
                     type="text"
                     placeholder="О чем вы думаете сейчас?"
-                    className="new-post-label form-control"
+                    className="form-control"
                     onChange={this.onValueChange}
                     value={this.state.text}
                 />
                 <button
                     type="submit"
                     className="btn btn-outline-secondary"
-                >Добавить</button>
+                >
+                    Добавить
+                </button>
             </form>
         )
     }
