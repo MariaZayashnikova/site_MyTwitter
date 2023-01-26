@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import style from './App.module.css';
 
 export default class PostAddForm extends Component {
@@ -12,18 +12,18 @@ export default class PostAddForm extends Component {
     }
 
     onValueChange(event) {
-        this.setState({text: event.target.value}); 
+        this.setState({ text: event.target.value });
     }
 
     onSubmit(event) {
         event.preventDefault();
         this.props.addItem(this.state.text);
-        this.setState({text: ''});
+        this.setState({ text: '' });
     }
-    
+
     render() {
         return (
-            <form 
+            <form
                 className={style.bottomPanel}
                 onSubmit={this.onSubmit}
             >
@@ -34,10 +34,10 @@ export default class PostAddForm extends Component {
                     onChange={this.onValueChange}
                     value={this.state.text}
                 />
-                <button 
+                <button
                     type="submit"
                     className="btn btn-outline-secondary"
-                    >Добавить</button>
+                >Добавить</button>
             </form>
         )
     }
